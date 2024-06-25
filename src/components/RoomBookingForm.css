@@ -1,0 +1,107 @@
+/* RoomBookingForm.css */
+
+.room-booking-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 250px; /* Set a minimum width for the inputs */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+input[type="date"] {
+  /* Adjust appearance for date input */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-calendar' viewBox='0 0 16 16'%3E%3Cpath d='M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2V3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-.5zm1.5-.5A.5.5 0 0 0 1 2v.5h14V2a.5.5 0 0 0-.5-.5H1zm13 4a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm3 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'/%3E%3C/svg%3E") no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.current-bookings {
+  margin-top: 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+li strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .room-booking-container {
+    max-width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  input[type="text"],
+  input[type="date"],
+  select {
+    min-width: auto; /* Remove minimum width on smaller screens */
+  }
+}
